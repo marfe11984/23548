@@ -1,4 +1,6 @@
+/*panel general de colores utilizados p armar la web*/
 :root {
+    /*Index*/
     --bgcolorheader: rgb(53, 58, 64);
     --btncolor: rgb(41, 167, 68);
     --bgjava: rgb(255, 192, 7);
@@ -8,6 +10,16 @@
     --bgfooter: rgb(29, 58, 74);
     --textcolorform:rgb(115,130,137);
     --bordercardcolor:rgb(223,223,223);
+
+    /*Ticket*/
+    --borderEstudiante: rgb(0, 123, 255);
+    --borderTrainee: rgb(23, 162, 184);
+    --borderJunior: rgb(255, 193, 7);
+    --colorpresentardocumentacion: rgb(108,117,125);
+    --bordertotalapagar: rgb(184, 218, 255);
+    --bgtotalapagar: rgb(204, 229, 255);
+    --colortotalapagar: rgb(0, 64, 133);
+    --bgborrarresumen: rgb(151, 201, 62);  
 }
 
 body {
@@ -18,8 +30,20 @@ header{
     background-color: var(--bgcolorheader)!important;
 }
 
+/*main{
+    background-image: url('../imagenes/hawaii.jpg');
+    height: 100vh; /*si al backround-image no le cargo un height, la imagen no aparecera en pantalla*/
+    /*filter: brightness(0.5);*/
+    /*background-position: center; /*centrado de la imagen*/
+    /*background-size: cover;  /*para que entre la imagen en todo el ancho de pantalla*/   
+/*}*/
+
 .filter{
-    filter: brightness(0.6);
+    filter: brightness(0.6);/*cambio el brillo de la imagen*/
+}
+
+.borde-transparente{
+    border-color: -- !important;
 }
 
 /*PROPIEDADES EN CARD ORADORES */
@@ -48,6 +72,25 @@ header{
         border-color: var(--bgstartups) !important;
     }
 
+
+/*PROPIEDADES DE LAS CARDS-TICKET*/
+.borde-estudiante{
+    border-color: var(--borderEstudiante) !important;
+}
+
+.borde-Trainee{
+    border-color: var(--borderTrainee) !important;
+}
+
+.borde-junior{
+    border-color: var(--borderJunior) !important;
+}
+
+.texto-cards{
+    color: var(--colorpresentardocumentacion);
+}
+
+
 /*PROPIEDADES EN BS AS-Octubre*/ 
     .bg-BsAsOctubre{
         background-color: var(--bgcolorheader) !important;
@@ -58,16 +101,24 @@ header{
     }
     
 
-/*PROPIEDADES EN FORMULARIO*/
+/*PROPIEDADES EN FORMULARIO INDEX y TICKET*/
     .texto-formulario{
         font-size: 0.8em;
         color: var(--textcolorform) !important;
     }
 
     .btn-formulario{
-        background-color: var(--bgenviar) !important;
+        background-color: var(--bgenviar) !important; /*agrego el !important para que tenga relevancia sobre el color que impone bootstrap al boton*/
         border-color: var(--bgenviar) !important;
     }
+
+    .totalapagar{
+        background-color: var(--bgtotalapagar) !important;
+        border-color: var(--bordertotalapagar);
+        border-radius: 5px;
+        color: var(--colortotalapagar) !important;;
+    }
+
 
 /*PROPIEDADES DEL FOOTER*/
     footer{
@@ -76,15 +127,15 @@ header{
     }
 
 
-/*PROPIEDADES RESPONSIVE DE PANTALLA */
+/*PROPIEDADES RESPONSIVE DE PANTALLA (impactan cuando cambia el tamaño de pantalla)*/
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px){   /*cuando llegue a 800px, que cambie la altura del footer*/
     footer{
         height: 7em;
     }
 }
 
-@media screen and (max-width: 665px){
+@media screen and (max-width: 665px){   /*cuando llegue a 665px, que cambie la altura del carrousel*/
     .text-confBsAs{
         font-size: 0.8em !important;
     }
@@ -96,7 +147,7 @@ header{
     }
 }
 
-@media screen and (max-width: 593px){
+@media screen and (max-width: 593px){   /*cuando llegue a 593px, que cambie la altura del footer*/
     footer{
         height: 12em;
     }

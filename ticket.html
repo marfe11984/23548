@@ -1,1 +1,188 @@
-<h1>Comprar tickets</h1>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"> <!--categoria en la q está escrito el documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="website"> <!--indica al navegador que es un sitio web indexado, que este dentro del indice de busqueda de google u otro sitio-->
+    <meta http-equiv="refresh" content="30"> <!--para q la pagina se refresque cada un tiempo determinado-->
+    <meta name="revised" content="14/10/2023"> <!--indica la última fecha de revisión/actualizacion-->
+    <title>Ticket</title> <!--el título es o unico visible de la página-->
+    <link rel="shortcut icon" type="image/x-icon" href="./imagenes/favicon.ico.png">
+    <link rel="stylesheet" href="./css/styles.css"> <!--vinculo con el archivo CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> <!-- Bootstrap CSS v5.3.2 -->
+</head>
+
+<body>
+    <header class="position-sticky top-0 z-1">
+        <nav class="navbar navbar-expand-lg"> <!--borro el bg-body-tertiary, que es el backround del header, porque no me toma el color del backround de mi css-->
+            <div class="container-fluid mx-5"> <!--fluid=integra el 100% del tamaño disponible, y mx-5: es un margin horizontal por der e izq y 5 es el valor aplicado al margen-->
+                <!--<img src="./imagenes/logo codoacodo.png" alt="Logo de Codo a Codo" width="100">--> <!--1º agrego el logo con un width=100% -->
+                <a class="navbar-brand text-light" href="#">Conf en Bs As</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav"> <!--2º: agrego un flex-row-reverse, para que me acomode los elementos al reves-->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./index.html">La conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./index.html#Losoradores">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">El lugar y la Fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="./index.html#orador">Conviértete en orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="#">Comprar ticket</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--2-1-Cards Tickets-->
+        <!--2-2-agrego un div principal con un mt-2 y col-7-->
+        <!--2-3-agrego el contenido x telado-->
+        <!--2-4-agrego text-center en las 3 cards-->
+        <!--2-5-Creo 3 class propias con los bordes de colores para las cards e inserto las class-->
+        <!--2-6-Agrego negrita en los 80% de cada card, con boostrapt (fw-bold)-->
+        <div class="container mt-2 col-7">
+            <div class="row"> <!--https://getbootstrap.com/docs/5.3/components/card/#about--> <!--Sizing-->
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="card text-center borde-estudiante">
+                        <div class="card-body">
+                            <h4 class="card-title">Estudiante</h4>
+                            <p class="card-title">Tiene un descuento</p>
+                            <p class="card-text fw-bold">80%</p>
+                            <p class="card-text texto-cards">*presentar documentación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card text-center borde-Trainee">
+                        <div class="card-body">
+                            <h4 class="card-title">Trainee</h4>
+                            <p class="card-title">Tiene un descuento</p>
+                            <p class="card-text fw-bold">50%</p>
+                            <p class="card-text texto-cards">*presentar documentación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card text-center borde-junior">
+                        <div class="card-body">
+                            <h4 class="card-title">Junior</h4>
+                            <p class="card-title">Tiene un descuento</p>
+                            <p class="card-text fw-bold">15%</p>
+                            <p class="card-text texto-cards">*presentar documentación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--3º-Formulario-->
+        <!--3-0-hago un div, agrego un class con texto centrado, margen superior espaciado y Agrego el texto-->
+        <!--3-1-hago div con un container+ent, luego con un row+enter-->
+        <!--3-2-ingreso a bootstrap y busco el formulario a colocar-->
+        <!--3-3-Agrego el boton enviar, lo ajusto en ancho, alto y le modifico el color de fondo con un class en css-->
+        <!--3-3-hago los ajustes con margenes para acomodarlo-->
+        <div class="text-center mt-3 my-0">
+            <p>VENTA</p>
+            <h3>VALOR DEL TICKET $200</h3>
+        </div>
+        <div class="container mt-2 col-7">
+            <div class="row justify-content-center align-items-center g-2">
+            </div>
+            <div class="row my-3"> <!--https://getbootstrap.com/docs/5.3/forms/layout/-->
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Nombre" value="" name="" id="name" aria-label="First name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Apellido" value="" name="" id="lastname" aria-label="Last name">
+                </div>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="mail@example.com" value="" name="" id="mail" aria-describedby="emailHelp">
+            </div>
+            <div class="row mt-3"> 
+                <div class="col">
+                    <label for="" class="ms-1 mb-1">Cantidad</label>
+                    <input type="number" class="form-control" placeholder="Cantidad" value="" name="" id="cant" aria-label="cant">
+                </div>
+                <div class="col">
+                    <label for="" class="ms-1 mb-1">Categoría</label>
+                    <select class="form-select" name="" id="category"> <!--SELECT, sirve para crear una lista desplegable de opciones-->
+                        <option value="estudiante">Estudiante</option>
+                        <option value="trainee">Trainee</option>
+                        <option value="junior">Junior</option>
+                    </select>
+                </div>
+            </div>
+            <!--
+                <div class="col">
+                    <label for="" class="ms-1 mb-1">Categoría</label>
+                    <input type="text" class="form-control" placeholder="categoría" id="" aria-label="category">
+            -->         
+            <div class="row my-3 mx-0 p-2 totalapagar">
+                <div class="col">Total a pagar</div> 
+            </div>
+            <div class="row mt-3"> <!--https://getbootstrap.com/docs/5.3/forms/layout/-->
+                <div class="col">
+                    <div>
+                        <button type="submit" class="btn btn-primary col-12 btn-formulario" id="">Borrar</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <button type="submit" class="btn btn-primary col-12 btn-formulario" id="">Resumen</button>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+
+    <!--4º-Footer-->
+    <!--4-1-escribo container+enter y luego un row+enter-->
+    <!--4-2-establezco el color a la barra footer y le doy altura, con mi css-->
+    <!--4-3-establezco espaciado con resp al boton "enviar" (mt-3) y un espaciado interno de los botones (pt-4)-->
+    <!--4-4-<p> y <small> en cada boton para que establezca un ancho maximo de 300 px por c/u-->
+    <!--https://getbootstrap.com/docs/5.3/components/modal/#optional-sizes-->
+    <footer class="container-fluid text-white mt-4">
+        <div class="row text-center mx-5 pt-4">
+            <div class="col">
+                <p><small>Preguntas Frecuentes</p></small>
+            </div>
+            <div class="col">
+                <p><small>Contáctanos</small></p>
+            </div>
+            <div class="col">
+                <p><small>Prensa</small></p>
+            </div>
+            <div class="col">
+                <p><small>Conferencias</small></p>
+            </div>
+            <div class="col">
+                <p><small>Términos y condiciones</small></p>
+            </div>
+            <div class="col">
+                <p><small>Privacidad</small></p>
+            </div>
+            <div class="col">
+                <p><small>Estudiantes</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  <!-- Bootstrap JavaScript Libraries -->
+</body>
+
+</html>
