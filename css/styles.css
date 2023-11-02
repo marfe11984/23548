@@ -143,11 +143,11 @@ header{
     footer{
         height: 12em;
     }
-    main{
-        width: max-content;  
-    }
     #ticketJunior{
         margin-top: 1em;
+    }
+    #categoria{
+        margin-top: 1.5em;
     }
 }
 
