@@ -30,16 +30,8 @@ header{
     background-color: var(--bgcolorheader)!important;
 }
 
-/*main{
-    background-image: url('../imagenes/hawaii.jpg');
-    height: 100vh; /*si al backround-image no le cargo un height, la imagen no aparecera en pantalla*/
-    /*filter: brightness(0.5);*/
-    /*background-position: center; /*centrado de la imagen*/
-    /*background-size: cover;  /*para que entre la imagen en todo el ancho de pantalla*/   
-/*}*/
-
 .filter{
-    filter: brightness(0.6);/*cambio el brillo de la imagen*/
+    filter: brightness(0.6);
 }
 
 .borde-transparente{
@@ -108,7 +100,7 @@ header{
     }
 
     .btn-formulario{
-        background-color: var(--bgenviar) !important; /*agrego el !important para que tenga relevancia sobre el color que impone bootstrap al boton*/
+        background-color: var(--bgenviar) !important;
         border-color: var(--bgenviar) !important;
     }
 
@@ -147,9 +139,15 @@ header{
     }
 }
 
-@media screen and (max-width: 593px){   /*cuando llegue a 593px, que cambie la altura del footer*/
+@media screen and (max-width: 595px){   /*cuando llegue a 595px, que cambie la altura del footer*/
     footer{
         height: 12em;
+    }
+    main{
+        width: max-content;  
+    }
+    #ticketJunior{
+        margin-top: 1em;
     }
 }
 
